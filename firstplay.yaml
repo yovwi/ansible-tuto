@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Update repository index 
+    yum: 
+      update_cache: yes    
+  
+  - name: install nginx package
+    yum: 
+      name: nginx
+  
